@@ -76,7 +76,7 @@
             >
               Crea Prodotto
             </button>
-            <button id="reset-button" class="btn btn-danger mt-3" onclick="resetForm()">
+            <button id="reset-button" class="btn btn-danger mt-3">
               Reset
             </button>
             </div>
@@ -148,8 +148,16 @@
       }
 
       function resetForm(){
-        document.getElementById("product-form").value = ""
+        let reset = document.getElementById("reset-button")
+        reset.onclick = function(){
+          document.getElementById("product-name").value=""
+          document.getElementById("product-description").value=""
+          document.getElementById("product-brand").value=""
+          document.getElementById("product-imageUrl").value=""
+          document.getElementById("product-price").value= ""
+        }
       }
+      resetForm()
     </script>
   </body>
 </html>
