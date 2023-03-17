@@ -68,17 +68,17 @@
               <input type="number" class="form-control" id="product-price" />
             </div>
             <div class="d-flex justify-content-between">
-            <button
-              id="submit-button"
-              type="submit"
-              class="btn btn-success mt-3"
-              onclick="onFormSubmit(event)"
-            >
-              Crea Prodotto
-            </button>
-            <button id="reset-button" class="btn btn-danger mt-3">
-              Reset
-            </button>
+              <button
+                id="submit-button"
+                type="submit"
+                class="btn btn-success mt-3"
+                onclick="onFormSubmit(event)"
+              >
+                Crea Prodotto
+              </button>
+              <button id="reset-button" class="btn btn-danger mt-3">
+                Reset
+              </button>
             </div>
           </form>
         </div>
@@ -112,7 +112,6 @@
         );
         const product = await response.json();
         //console.log(product)
-
       };
 
       async function onFormSubmit(event) {
@@ -147,17 +146,17 @@
         }
       }
 
-      function resetForm(){
-        let reset = document.getElementById("reset-button")
-        reset.onclick = function(){
-          document.getElementById("product-name").value=""
-          document.getElementById("product-description").value=""
-          document.getElementById("product-brand").value=""
-          document.getElementById("product-imageUrl").value=""
-          document.getElementById("product-price").value= ""
-        }
+      function resetForm() {
+        let reset = document.getElementById("reset-button");
+        reset.onclick = function () {
+          document.getElementById("product-name").value = "";
+          document.getElementById("product-description").value = "";
+          document.getElementById("product-brand").value = "";
+          document.getElementById("product-imageUrl").value = "";
+          document.getElementById("product-price").value = "";
+        };
       }
-      resetForm()
+      resetForm();
     </script>
   </body>
 </html>
